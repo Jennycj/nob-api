@@ -5,7 +5,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { AxiosRequestConfig } from 'axios';
 import { lastValueFrom, map } from 'rxjs';
 import { TransactionDto } from 'src/dto';
-import { BtcTransactionSend } from 'src/typeorm/transaction.send.entity';
+import { BtcTransactionSend } from '../typeorm/transaction.send.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()

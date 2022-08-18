@@ -4,8 +4,8 @@ import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
 import { AxiosRequestConfig } from 'axios';
 import { lastValueFrom, map } from 'rxjs';
-import { AddressDto } from 'src/dto';
-import { BtcAddress } from 'src/typeorm/address.entity';
+import { AddressDto } from '../dto';
+import { BtcAddress } from '../typeorm/address.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()

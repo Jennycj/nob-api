@@ -11,7 +11,4 @@ export class AddressDto {
   @IsString()
   @IsNotEmpty()
   formatType: string;
-
-  // @IsNumberString()
-  // satoshis: number;
 }

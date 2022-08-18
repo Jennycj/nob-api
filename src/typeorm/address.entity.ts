@@ -22,9 +22,6 @@ export class BtcAddress {
   @Column()
   addressType: string;
 
-  // @Column()
-  // satoshis: number;
-
   @CreateDateColumn()
   created_at: Date;
 
