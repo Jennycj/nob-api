@@ -1,6 +1,6 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { BtcAddress } from './address.entity';
-import { BtcTransactionSend } from './transaction.send.entity';
+import { BtcAddress } from '../address/address.entity';
+import { BtcTransactionSend } from '../transactions/transaction.send.entity';
 
 export const config: TypeOrmModuleOptions = {
   type: 'postgres',

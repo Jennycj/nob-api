@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TransactionService } from './transactions.service';
 import { TransactionsController } from './transactions.controller';
-import { BtcTransactionSend } from '../typeorm/transaction.send.entity';
+import { BtcTransactionSend } from './transaction.send.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HttpModule } from '@nestjs/axios';
 import { ConfigModule } from '@nestjs/config';

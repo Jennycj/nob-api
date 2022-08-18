@@ -4,9 +4,9 @@ import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
 import { AxiosRequestConfig } from 'axios';
 import { lastValueFrom, map } from 'rxjs';
-import { TransactionDto } from 'src/dto';
-import { BtcTransactionSend } from '../typeorm/transaction.send.entity';
+import { BtcTransactionSend } from './transaction.send.entity';
 import { Repository } from 'typeorm';
+import { TransactionDto } from './transaction.dto';
 
 @Injectable()
 export class TransactionService {
@@ -76,14 +76,14 @@ export class TransactionService {
       ),
     );
 
-    // const data = responseData.data.transactions;
-    const data = this.transactionRepository.find();
-    console.log(data);
-    // const sentTransactions = data.filter(
-    //   (transaction: { action: string }) =>
-    //     transaction.action === 'send_bitcoin',
-    // );
-    // return sentTransactions;
-    return data;
+    const data = responseData.data.transactions;
+    // const data = this.transactionRepository.find();
+    // console.log(data);
+    const sentTransactions = data.filter(
+      (transaction: { action: string }) =>
+        transaction.action === 'send_bitcoin',
+    );
+    return sentTransactions;
+    // return data;
   }
 }
